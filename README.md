@@ -54,7 +54,7 @@ flowchart LR
 
 ## Experience
 
-- **Junior Security Analyst**, Metropolitan State University of Denver · 2026 to present
+- **Security Analyst Intern, then Junior Security Analyst**, Metropolitan State University of Denver · 2026 to present
 - **Cybersecurity Analyst Intern**, Evolve Security Academy · 2026 to present
 - **Junior Network Admin**, Metropolitan State University of Denver · 2025 to 2026, 20 sites and over 800 devices
 - **Cyber Threat Intelligence Intern**, Western Union · 2025
