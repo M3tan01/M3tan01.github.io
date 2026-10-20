@@ -52,7 +52,8 @@ flowchart LR
 | **Threat intelligence** | MITRE ATT&CK mapping · STIX/TAXII · MISP · OpenCTI |
 | **AI security** | AI-assisted SOC workflows · LLM red teaming · OWASP Top 10 for LLM Applications |
 | **Infrastructure** | AWS VPCs · Entra ID · Active Directory · Linux · Python · PowerShell |
-| **Certifications** | CompTIA Security+ · CompTIA Network+ · Google Cybersecurity Specialization · NVIDIA Fundamentals of Deep Learning · Linux Command Line |
+| **Certifications** | CompTIA Security+ · CompTIA Network+ · Google Cybersecurity Specialization · NVIDIA Fundamentals of Deep Learning · TryHackMe Pre Security · Linux Command Line |
+| **Speaking** | 2025 ACM SIGUCCS Annual Conference presenter |
 | **Languages** | Persian · English · Pashto |
 
 ## Experience
