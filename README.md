@@ -61,4 +61,4 @@ flowchart LR
 
 - 🌐 Portfolio: [m3tan01.github.io](https://m3tan01.github.io)
 - 💼 LinkedIn: [linkedin.com/in/mohammadma](https://www.linkedin.com/in/mohammadma/)
-- 🎥 CyberArb: security tutorials on exploits and packet analysis
+- 🎥 YouTube: [CyberArb](https://www.youtube.com/@CyberArb), step-by-step security tutorials on exploits and packet analysis
