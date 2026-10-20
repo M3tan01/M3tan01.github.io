@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohammad Ahmadi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single left-aligned column, report-style sections with a narrow label rail on wide screens. Red lane / blue lane diagram is the one bold element. */
+:root {
+  --bg: #EDF0F3;
+  --surface: #F8F9FB;
+  --fg: #131D27;
+  --muted: #566372;
+  --line: #CBD3DB;
+  --accent: #0E5A78;
+  --red: #B03A30;
+  --blue: #1F5CA6;
+  --red-bg: #F4E2E0;
+  --blue-bg: #DEE8F5;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E151C; --surface: #151E27; --fg: #E4EAF0; --muted: #93A1AF; --line: #2A3641;
+    --accent: #5DB7D6; --red: #F0877D; --blue: #7FB0EE; --red-bg: #2E1C1B; --blue-bg: #17243A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E151C; --surface: #151E27; --fg: #E4EAF0; --muted: #93A1AF; --line: #2A3641;
+  --accent: #5DB7D6; --red: #F0877D; --blue: #7FB0EE; --red-bg: #2E1C1B; --blue-bg: #17243A;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 400 16px/1.6 var(--body);
+  padding-block: 40px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.1; }
+p { margin: 0; }
+.mono { font-family: var(--mono); }
+.label { font: 500 12px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+/* hero */
+.hero { display: flex; flex-direction: column; gap: 20px; padding-top: 8px; }
+.hero h1 { font-size: clamp(2.6rem, 8vw, 4.8rem); font-weight: 700; letter-spacing: -.02em; }
+.hero .role { font-size: clamp(1.1rem, 2.4vw, 1.35rem); max-width: 34em; color: var(--fg); }
+.hero .role span { color: var(--muted); }
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 16px;
+  font: 500 14px/1 var(--mono); color: var(--fg); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 4px; text-decoration: none; cursor: pointer;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn.primary:hover { color: var(--bg); filter: brightness(1.1); }
+
+/* section frame */
+section { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px 32px; border-top: 1px solid var(--line); padding-top: 20px; }
+section > .label { padding-top: 6px; }
+.body { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+@media (max-width: 720px) { section { grid-template-columns: 1fr; } }
+
+/* project */
+.project { display: flex; flex-direction: column; gap: 14px; }
+.project h3 { font-size: 1.7rem; font-weight: 700; letter-spacing: -.01em; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 400 13px/1.5 var(--mono); color: var(--muted); }
+.project p { max-width: 62ch; }
+.bullets { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; max-width: 62ch; }
+.bullets li::marker { color: var(--accent); }
+.note { font-size: 14px; color: var(--muted); max-width: 62ch; }
+
+/* lanes */
+.lanes { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; display: flex; flex-direction: column; gap: 16px; }
+.lane { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 8px 14px; align-items: start; }
+.lane > b { font: 500 12px/1.9 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.lane.red > b { color: var(--red); }
+.lane.blue > b { color: var(--blue); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; min-width: 0; }
+.chips li { font: 400 13px/1.3 var(--mono); padding: 6px 10px; border-radius: 3px; border: 1px solid; }
+.red .chips li { background: var(--red-bg); border-color: var(--red); color: var(--fg); }
+.blue .chips li { background: var(--blue-bg); border-color: var(--blue); color: var(--fg); }
+.lanes .cap { font: 400 12px/1.5 var(--mono); color: var(--muted); border-top: 1px dashed var(--line); padding-top: 12px; }
+@media (max-width: 520px) { .lane { grid-template-columns: 1fr; } }
+
+/* timeline */
+.job { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.job:last-child { border-bottom: 0; padding-bottom: 0; }
+.job h3 { font-size: 1.2rem; font-weight: 500; }
+.job .where { color: var(--muted); }
+.job .when { font: 400 13px/1.5 var(--mono); color: var(--muted); }
+
+/* credentials */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px 32px; }
+.cred { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.cred b { font-weight: 600; }
+.cred span { color: var(--muted); font-size: 14px; }
+.skills { display: flex; flex-direction: column; gap: 14px; }
+.skills div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 16px; }
+.skills dt { font: 500 12px/1.8 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.skills dd { margin: 0; }
+@media (max-width: 600px) { .skills div { grid-template-columns: 1fr; } }
+
+footer { font: 400 13px/1.5 var(--mono); color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+@media (prefers-reduced-motion: no-preference) { .btn { transition: border-color .15s, color .15s, filter .15s; } }
+html { color-scheme: light dark; } body { margin: 0; }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="label">Security analyst · Denver, CO</p>
+    <h1>Mohammad Ahmadi</h1>
+    <p class="role">I triage alerts in Microsoft Defender XDR, write the KQL detections that catch what the defaults miss, and build open-source tooling that lets red and blue agents test each other. <span>Graduating December 2026 with a B.S. in Cybersecurity.</span></p>
+    <div class="links">
+      <a class="btn primary" href="https://github.com/M3tan01">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/mohammadma/">LinkedIn</a>
+      <button class="btn" id="copy" type="button" aria-live="polite">Copy email</button>
+    </div>
+  </header>
+
+  <section id="projects">
+    <p class="label">Projects</p>
+    <div class="body">
+
+      <article class="project">
+        <h3>OpenElia</h3>
+        <div class="meta"><span>Python</span><span>MIT license</span><span>209 commits</span><span><a href="https://github.com/M3tan01/OpenElia">github.com/M3tan01/OpenElia</a></span></div>
+        <p>An open-source platform for AI-assisted purple-team work. Red, blue and reporting agents use the Model Context Protocol to run an attack, detect it, and respond, all inside a scope gate that refuses to act without a rules-of-engagement file.</p>
+
+        <div class="lanes" role="group" aria-label="OpenElia agent lanes">
+          <div class="lane red">
+            <b>Red</b>
+            <ul class="chips"><li>Recon</li><li>Vulnerability assessment</li><li>Exploitation</li><li>Lateral movement</li><li>Exfiltration</li></ul>
+          </div>
+          <div class="lane blue">
+            <b>Blue</b>
+            <ul class="chips"><li>Tier 1 Sigma / regex monitoring</li><li>Tier 2 LLM triage</li><li>Threat hunting</li><li>Tier 4 containment</li></ul>
+          </div>
+          <p class="cap">Reporter agent closes the loop with an executive report, a MITRE ATT&amp;CK heatmap and a chain of custody.</p>
+        </div>
+
+        <ul class="bullets">
+          <li>Offensive modules run in ephemeral, rootless Docker containers with all Linux capabilities dropped.</li>
+          <li>Audit entries are chained with HMAC-SHA256, so tampering shows up in the log.</li>
+          <li>A scope check validates targets against <span class="mono">roe.json</span> and fails closed when the file is missing. Blue-team remediation stays in simulation mode until explicitly enabled.</li>
+          <li>Red team techniques come from the Atomic Red Team library, with human confirmation in the loop. Adversary profiles such as APT29 and FIN7 are supported.</li>
+        </ul>
+        <p class="note">The project describes itself as a research and lab tool. A multi-operator team server is planned and not built yet.</p>
+      </article>
+
+      <article class="project">
+        <h3>WireGuard VPN Server</h3>
+        <div class="meta"><span>Guide</span><span>Ubuntu LTS</span><span>about 45 minutes</span><span><a href="https://github.com/M3tan01/WireGuard-VPN-Server">github.com/M3tan01/WireGuard-VPN-Server</a></span></div>
+        <p>A step-by-step guide to running a private VPN on a roughly $5 per month cloud server. It covers key generation, routing and NAT, UFW rules, SSH hardening with key-only login on a non-default port, and DNS and IPv6 leak tests.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="label">Experience</p>
+    <div class="body">
+
+      <div class="job">
+        <h3>Junior Security Analyst <span class="where">· Metropolitan State University of Denver</span></h3>
+        <p class="when">July 2026 to present · promoted</p>
+        <ul class="bullets">
+          <li>Triage security alerts in Microsoft Defender XDR and tune rules to cut false positives.</li>
+          <li>Raised the organization's secure score by 5% through audits of Attack Surface Reduction rules.</li>
+          <li>Write custom KQL detections for privilege escalation, lateral movement and data exfiltration, reducing detection blind spots by 10%.</li>
+          <li>Assist incident response by analyzing malware on endpoints and remediating business email compromise.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Cybersecurity Analyst, Internship <span class="where">· Evolve Security Academy</span></h3>
+        <p class="when">July 2026 to present</p>
+        <ul class="bullets">
+          <li>Built AWS VPCs with public and private subnets and a LAMP stack, then assessed web apps with Burp Suite, Nikto, DirBuster and Python.</li>
+          <li>Investigated incidents with Wireshark, Zeek, Windows Event Logs, Kibana (ELK) and Splunk dashboards.</li>
+          <li>Used structured AI prompts in repeatable SOC workflows to triage Wazuh alerts and generate and validate Sigma rules.</li>
+          <li>Tested prompt injection and jailbreaks against the OWASP Top 10 for LLM Applications in red-teaming labs.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Junior Network Admin <span class="where">· Metropolitan State University of Denver</span></h3>
+        <p class="when">September 2025 to August 2026 · promoted</p>
+        <ul class="bullets">
+          <li>Installed, configured and tested routers, switches and wireless access points across 20 physical sites, including the Auraria Campus.</li>
+          <li>Worked to TCP/IP, 802.1Q and 802.11ac/n standards and monitored DNS, Meraki and SolarWinds to find points of failure.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Cybersecurity Intern, Cyber Threat Intelligence <span class="where">· Western Union</span></h3>
+        <p class="when">June to August 2025</p>
+        <ul class="bullets">
+          <li>Evaluated MISP and OpenCTI for STIX/TAXII integration, saving 30+ hours per month.</li>
+          <li>Mapped indicators of compromise to MITRE ATT&amp;CK tactics and techniques.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>IT Support <span class="where">· Metropolitan State University of Denver</span></h3>
+        <p class="when">February 2024 to September 2025</p>
+        <ul class="bullets">
+          <li>Resolved 12+ tickets a day at a 95% first-call resolution rate for 200+ faculty and staff.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="credentials">
+    <p class="label">Credentials</p>
+    <div class="body">
+      <div class="grid2">
+        <div class="cred"><b>CompTIA Security+</b><span>September 2026</span></div>
+        <div class="cred"><b>CompTIA Network+</b><span>July 2025</span></div>
+        <div class="cred"><b>B.S. Cybersecurity, Minor in Computer Science</b><span>Metropolitan State University of Denver · December 2026 · 3.8 GPA</span></div>
+        <div class="cred"><b>Awards</b><span>Outstanding Student Involvement and Leadership Award · Cybersecurity Program Honor Roll, 3 times</span></div>
+      </div>
+      <dl class="skills">
+        <div><dt>Detection</dt><dd>Microsoft Defender XDR, KQL, Sigma, Splunk, Wazuh, ELK, CrowdStrike Falcon</dd></div>
+        <div><dt>Offense</dt><dd>Burp Suite, Metasploit, Nmap, Hydra, Hashcat, Kali Linux</dd></div>
+        <div><dt>Infrastructure</dt><dd>AWS VPCs, Azure, Entra ID, Active Directory, Cisco Meraki, Linux, PowerShell, Python, Bash</dd></div>
+        <div><dt>AI security</dt><dd>AI-assisted SOC workflows, LLM red teaming, prompt injection and jailbreak testing</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="content">
+    <p class="label">Content</p>
+    <div class="body">
+      <p style="max-width:62ch"><b>CyberArb</b> is my cybersecurity YouTube channel. I publish step-by-step tutorials that demonstrate vulnerability exploits and packet analysis.</p>
+    </div>
+  </section>
+
+  <footer>Mohammad Ahmadi · Denver, CO · mahdi_ahmadi313@outlook.com</footer>
+</div>
+
+<script>
+(function () {
+  var email = "mahdi_ahmadi313@outlook.com";
+  var btn = document.getElementById("copy");
+  btn.addEventListener("click", function () {
+    function done() { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy email"; }, 1800); }
+    function fallback() { btn.textContent = email; }
+    try {
+      navigator.clipboard.writeText(email).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
