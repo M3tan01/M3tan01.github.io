@@ -25,7 +25,10 @@ I triage alerts in Microsoft Defender XDR, write KQL detections for privilege es
 | Project | What it is | Stack |
 |---|---|---|
 | **[OpenElia](https://github.com/M3tan01/OpenElia)** | AI-assisted purple-team platform. Red, blue and reporter agents coordinate over the Model Context Protocol. | Python · MCP · Atomic Red Team · Docker |
-| **[WireGuard-VPN-Server](https://github.com/M3tan01/WireGuard-VPN-Server)** | Step-by-step guide to a private VPN on a small cloud server, with firewall rules, SSH hardening and leak tests. | WireGuard · Ubuntu · UFW |
+| **[WireGuard VPN Implementation](https://github.com/M3tan01/WireGuard-VPN-Server)** | Bash-automated WireGuard server with Curve25519 and ChaCha20, plus a step-by-step guide covering firewall rules, SSH hardening and leak tests. | WireGuard · Bash · Ubuntu · UFW |
+| **Network Security Assessment** | Three-week assessment of a simulated healthcare network: packet inspection, port scanning, a segmented least-privilege firewall redesign and an executive remediation plan. | Firewall design · Vulnerability assessment |
+| **Enterprise Threat Modeling** | STRIDE analysis of a complex network, with MITRE ATT&CK mapping and data flow diagrams to find trust boundaries. | STRIDE · MITRE ATT&CK · DFDs |
+| **CTI Platform Comparison** | Proof of concept comparing MISP and OpenCTI on STIX/TAXII ingestion, IoC enrichment and ATT&CK mapping at Western Union. | MISP · OpenCTI · STIX/TAXII · Containers |
 
 ### How OpenElia works
 
