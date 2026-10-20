@@ -94,6 +94,13 @@ section > .label { padding-top: 6px; }
 .lanes .cap { font: 400 12px/1.5 var(--mono); color: var(--muted); border-top: 1px dashed var(--line); padding-top: 12px; }
 @media (max-width: 520px) { .lane { grid-template-columns: 1fr; } }
 
+/* more projects */
+.minis { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px 28px; }
+.mini { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.mini h3 { font-size: 1.15rem; font-weight: 500; letter-spacing: -.005em; }
+.mini p { font-size: 15px; }
+.more { border-top: 1px solid var(--line); padding-top: 20px; }
+
 /* timeline */
 .job { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
 .job:last-child { border-bottom: 0; padding-bottom: 0; }
@@ -140,7 +147,7 @@ html { color-scheme: light dark; } body { margin: 0; }
 
       <article class="project">
         <h3>OpenElia</h3>
-        <div class="meta"><span>Python</span><span>MIT license</span><span>209 commits</span><span><a href="https://github.com/M3tan01/OpenElia">github.com/M3tan01/OpenElia</a></span></div>
+        <div class="meta"><span>March 2026 to present</span><span>Python</span><span>MIT license</span><span>209 commits</span><span><a href="https://github.com/M3tan01/OpenElia">github.com/M3tan01/OpenElia</a></span></div>
         <p>An open-source platform for AI-assisted purple-team work. Red, blue and reporting agents use the Model Context Protocol to run an attack, detect it, and respond, all inside a scope gate that refuses to act without a rules-of-engagement file.</p>
 
         <div class="lanes" role="group" aria-label="OpenElia agent lanes">
@@ -165,10 +172,36 @@ html { color-scheme: light dark; } body { margin: 0; }
       </article>
 
       <article class="project">
-        <h3>WireGuard VPN Server</h3>
-        <div class="meta"><span>Guide</span><span>Ubuntu LTS</span><span>about 45 minutes</span><span><a href="https://github.com/M3tan01/WireGuard-VPN-Server">github.com/M3tan01/WireGuard-VPN-Server</a></span></div>
-        <p>A step-by-step guide to running a private VPN on a roughly $5 per month cloud server. It covers key generation, routing and NAT, UFW rules, SSH hardening with key-only login on a non-default port, and DNS and IPv6 leak tests.</p>
+        <h3>WireGuard VPN Implementation</h3>
+        <div class="meta"><span>November 2025</span><span>Bash</span><span>Ubuntu LTS</span><span><a href="https://github.com/M3tan01/WireGuard-VPN-Server">github.com/M3tan01/WireGuard-VPN-Server</a></span></div>
+        <p>A WireGuard VPN server built with Bash scripts that handle dependencies, kernel module loading and peer configuration. It uses Curve25519 key exchange and ChaCha20 encryption, with routing and firewall rules that enforce strict access control.</p>
+        <p>I also published a step-by-step guide to the build on a roughly $5 per month cloud server, covering NAT, UFW rules, SSH hardening with key-only login on a non-default port, and DNS and IPv6 leak tests.</p>
       </article>
+
+      <div class="more">
+        <p class="label" style="margin-bottom:20px">More projects</p>
+        <div class="minis">
+
+          <article class="mini">
+            <h3>Network Security Assessment</h3>
+            <div class="meta"><span>April 2026</span><span>MSU Denver</span></div>
+            <p>A three-week assessment of a simulated healthcare organization's network. I ran deep-packet inspection and port scanning, mapped findings to known exploits, redesigned a flat network into a segmented least-privilege firewall architecture, and wrote an executive remediation plan ranked by exploitability and impact on patient data.</p>
+          </article>
+
+          <article class="mini">
+            <h3>Enterprise Threat Modeling</h3>
+            <div class="meta"><span>February 2026</span><span>MSU Denver</span></div>
+            <p>A threat model of a complex network infrastructure. I evaluated each component against the six STRIDE categories, mapped likely attack vectors to MITRE ATT&amp;CK, and drew data flow diagrams to find the trust boundaries where controls matter most.</p>
+          </article>
+
+          <article class="mini">
+            <h3>CTI Platform Comparison</h3>
+            <div class="meta"><span>June to August 2025</span><span>Western Union</span></div>
+            <p>A proof of concept that deployed MISP and OpenCTI in containers and compared them with the legacy system on STIX/TAXII feed ingestion, IoC enrichment, MITRE ATT&amp;CK mapping and maintenance overhead.</p>
+          </article>
+
+        </div>
+      </div>
 
     </div>
   </section>
