@@ -49,13 +49,16 @@ flowchart LR
 | **Threat intelligence** | MITRE ATT&CK mapping · STIX/TAXII · MISP · OpenCTI |
 | **AI security** | AI-assisted SOC workflows · LLM red teaming · OWASP Top 10 for LLM Applications |
 | **Infrastructure** | AWS VPCs · Entra ID · Active Directory · Linux · Python · PowerShell |
+| **Certifications** | CompTIA Security+ · CompTIA Network+ · Google Cybersecurity Specialization · NVIDIA Fundamentals of Deep Learning · Linux Command Line |
+| **Languages** | Persian · English · Pashto |
 
 ## Experience
 
 - **Junior Security Analyst**, Metropolitan State University of Denver · 2026 to present
 - **Cybersecurity Analyst Intern**, Evolve Security Academy · 2026 to present
-- **Junior Network Admin**, Metropolitan State University of Denver · 2025 to 2026
+- **Junior Network Admin**, Metropolitan State University of Denver · 2025 to 2026, 20 sites and over 800 devices
 - **Cyber Threat Intelligence Intern**, Western Union · 2025
+- **IT Technician and Help Desk**, Metropolitan State University of Denver · 2022 to 2025
 
 ## Find me
 
