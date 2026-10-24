@@ -132,7 +132,7 @@ html { color-scheme: light dark; } body { margin: 0; }
   <header class="hero">
     <p class="label">Security analyst · Denver, CO</p>
     <h1>Mohammad Ahmadi</h1>
-    <p class="role">I triage alerts in Microsoft Defender XDR, write the KQL detections that catch what the defaults miss, and build open-source tooling that lets red and blue agents test each other. <span>Graduating December 2026 with a B.S. in Cybersecurity.</span></p>
+    <p class="role">I triage alerts and incidents in Microsoft Defender XDR and remediate them, write the KQL detections that catch what the defaults miss, and build open-source tooling that lets red and blue agents test each other. <span>Graduating December 2026 with a B.S. in Cybersecurity.</span></p>
     <div class="links">
       <a class="btn primary" href="https://github.com/M3tan01">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/mohammadma/">LinkedIn</a>
@@ -166,7 +166,7 @@ html { color-scheme: light dark; } body { margin: 0; }
           <li>Offensive modules run in ephemeral, rootless Docker containers with all Linux capabilities dropped.</li>
           <li>Audit entries are chained with HMAC-SHA256, so tampering shows up in the log.</li>
           <li>A scope check validates targets against <span class="mono">roe.json</span> and fails closed when the file is missing. Blue-team remediation stays in simulation mode until explicitly enabled.</li>
-          <li>Red team techniques come from the Atomic Red Team library, with human confirmation in the loop. Adversary profiles such as APT29 and FIN7 are supported.</li>
+          <li>Red team techniques come from the Atomic Red Team library, with human confirmation in the loop.</li>
         </ul>
         <p class="note">The project describes itself as a research and lab tool. A multi-operator team server is planned and not built yet.</p>
       </article>
@@ -184,8 +184,8 @@ html { color-scheme: light dark; } body { margin: 0; }
 
           <article class="mini">
             <h3>Network Security Assessment</h3>
-            <div class="meta"><span>April 2026</span><span>MSU Denver</span></div>
-            <p>A three-week assessment of a simulated healthcare organization's network. I ran deep-packet inspection and port scanning, mapped findings to known exploits, redesigned a flat network into a segmented least-privilege firewall architecture, and wrote an executive remediation plan ranked by exploitability and impact on patient data.</p>
+            <div class="meta"><span>April 2026</span><span>Course project, Defensive Cyber Operations</span><span>MSU Denver</span></div>
+            <p>A solo three-week assessment of a simulated healthcare organization's network. I ran deep-packet inspection and port scanning, mapped findings to known exploits, redesigned a flat network into a segmented least-privilege firewall architecture, and wrote an executive remediation plan ranked by exploitability and impact on patient data.</p>
           </article>
 
           <article class="mini">
@@ -214,7 +214,7 @@ html { color-scheme: light dark; } body { margin: 0; }
         <h3>Junior Security Analyst <span class="where">· Metropolitan State University of Denver</span></h3>
         <p class="when">Security Analyst Intern, June to August 2026 · Junior Security Analyst (promoted), September 2026 to present</p>
         <ul class="bullets">
-          <li>Triage security alerts in Microsoft Defender XDR and tune rules to cut false positives.</li>
+          <li>Analyze, triage and remediate 10+ security alerts and incidents daily in Microsoft Defender XDR (EDR), tuning rules to cut false positives and escalating critical threats.</li>
           <li>Raised the organization's secure score by 5% through audits of Attack Surface Reduction rules.</li>
           <li>Write custom KQL detections for privilege escalation, lateral movement and data exfiltration, reducing detection blind spots by 10%.</li>
           <li>Assist incident response by analyzing malware on endpoints and remediating business email compromise.</li>
@@ -227,7 +227,7 @@ html { color-scheme: light dark; } body { margin: 0; }
         <ul class="bullets">
           <li>Built AWS VPCs with public and private subnets and a LAMP stack, then assessed web apps with Burp Suite, Nikto, DirBuster and Python.</li>
           <li>Investigated incidents with Wireshark, Zeek, Windows Event Logs, Kibana (ELK) and Splunk dashboards.</li>
-          <li>Used structured AI prompts in repeatable SOC workflows to triage Wazuh alerts and generate and validate Sigma rules.</li>
+          <li>Used structured AI prompts in repeatable SOC workflows to analyze logs, generate and validate Sigma rules, and draft incident reports.</li>
           <li>Tested prompt injection and jailbreaks against the OWASP Top 10 for LLM Applications in red-teaming labs.</li>
         </ul>
       </div>
@@ -243,7 +243,7 @@ html { color-scheme: light dark; } body { margin: 0; }
       </div>
 
       <div class="job">
-        <h3>Cybersecurity Intern, Cyber Threat Intelligence <span class="where">· Western Union</span></h3>
+        <h3>Cyber Threat Intelligence Intern <span class="where">· Western Union</span></h3>
         <p class="when">June to August 2025</p>
         <ul class="bullets">
           <li>Evaluated MISP and OpenCTI for STIX/TAXII integration, saving 30+ hours per month.</li>
@@ -284,7 +284,7 @@ html { color-scheme: light dark; } body { margin: 0; }
         <div class="cred"><b>Awards</b><span>Outstanding Student Involvement and Leadership Award · Cybersecurity Program Honor Roll, 3 times</span></div>
       </div>
       <dl class="skills">
-        <div><dt>Detection</dt><dd>Microsoft Defender XDR, KQL, Sigma, Splunk, Wazuh, ELK, CrowdStrike Falcon</dd></div>
+        <div><dt>Detection</dt><dd>Microsoft Defender XDR, KQL, Sigma, Splunk, ELK, CrowdStrike Falcon</dd></div>
         <div><dt>Offense</dt><dd>Burp Suite, Metasploit, Nmap, Hydra, Hashcat, Kali Linux</dd></div>
         <div><dt>Infrastructure</dt><dd>AWS VPCs, Azure, Entra ID, Active Directory, Cisco Meraki, Linux, PowerShell, Python, Bash</dd></div>
         <div><dt>AI security</dt><dd>AI-assisted SOC workflows, LLM red teaming, prompt injection and jailbreak testing</dd></div>
