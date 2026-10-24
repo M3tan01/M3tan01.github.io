@@ -18,7 +18,7 @@ Denver, CO · B.S. Cybersecurity, December 2026
 
 ---
 
-I triage alerts in Microsoft Defender XDR, write KQL detections for privilege escalation, lateral movement and data exfiltration, and build open-source tooling that lets red and blue agents test each other.
+I triage alerts and incidents in Microsoft Defender XDR and remediate them, write KQL detections for privilege escalation, lateral movement and data exfiltration, and build open-source tooling that lets red and blue agents test each other.
 
 ## Projects
 
@@ -26,7 +26,7 @@ I triage alerts in Microsoft Defender XDR, write KQL detections for privilege es
 |---|---|---|
 | **[OpenElia](https://github.com/M3tan01/OpenElia)** | AI-assisted purple-team platform. Red, blue and reporter agents coordinate over the Model Context Protocol. | Python · MCP · Atomic Red Team · Docker |
 | **[WireGuard VPN Implementation](https://github.com/M3tan01/WireGuard-VPN-Server)** | Bash-automated WireGuard server with Curve25519 and ChaCha20, plus a step-by-step guide covering firewall rules, SSH hardening and leak tests. | WireGuard · Bash · Ubuntu · UFW |
-| **Network Security Assessment** | Three-week assessment of a simulated healthcare network: packet inspection, port scanning, a segmented least-privilege firewall redesign and an executive remediation plan. | Firewall design · Vulnerability assessment |
+| **Network Security Assessment** | Course project (Defensive Cyber Operations): three-week assessment of a simulated healthcare network: packet inspection, port scanning, a segmented least-privilege firewall redesign and an executive remediation plan. | Firewall design · Vulnerability assessment |
 | **Enterprise Threat Modeling** | STRIDE analysis of a complex network, with MITRE ATT&CK mapping and data flow diagrams to find trust boundaries. | STRIDE · MITRE ATT&CK · DFDs |
 | **CTI Platform Comparison** | Proof of concept comparing MISP and OpenCTI on STIX/TAXII ingestion, IoC enrichment and ATT&CK mapping at Western Union. | MISP · OpenCTI · STIX/TAXII · Containers |
 
@@ -48,7 +48,7 @@ flowchart LR
 
 | | |
 |---|---|
-| **Detection and response** | Microsoft Defender XDR · KQL · Sigma · Splunk · Wazuh · ELK |
+| **Detection and response** | Microsoft Defender XDR · KQL · Sigma · Splunk · ELK |
 | **Threat intelligence** | MITRE ATT&CK mapping · STIX/TAXII · MISP · OpenCTI |
 | **AI security** | AI-assisted SOC workflows · LLM red teaming · OWASP Top 10 for LLM Applications |
 | **Infrastructure** | AWS VPCs · Entra ID · Active Directory · Linux · Python · PowerShell |
